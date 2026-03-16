@@ -1,0 +1,29 @@
+Rest api
+
+Get/api /users       -list all user      -done
+Get/api/users/1  -get the user id 1       -done
+dynamic path parameter
+Get/api/users/2 -get the user id 2         -done
+//mocaroo
+
+( id -> variable  | dynamic
+Get/api/user/:id)               -done
+
+
+post/api/user -create new user
+
+
+patch/api/user/id-edit the user id 1
+DELETE/api/users/1-delete the user  with 
+
+
+
+
+Method	Use fs 
+readFile()	file read
+writeFile()	file create/write
+appendFile()	data add
+unlink()	file delete
+rename()	file rename
+mkdir()	folder create
+fs.readFileSync() 
