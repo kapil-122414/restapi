@@ -36,6 +36,34 @@ app.post("/api/senddata",(req,res)=>{
          res.json("successfuly");
 })
 
+//put
+app.put('/api/Edit/:id',(req,res)=>{
+    const user=JSON.parse(fs.readFileSync('./data.json','utf-8'));
+      const id=Number(req.params.id);
+      const body=req.body;
+    //   console.log(id);
+    //   console.log(body);
+    const  index=user.findIndex((user)=> user.id === id);
+     user[index] = { id, ...body };
+// console.log(data);
+fs.writeFileSync('./data.json',JSON.stringify( user ))
+ res.json( user[index] )
+    
+});
+
+//delete
+
+app.delete('/api/delete/:id',(req,res)=>{
+
+    const user=JSON.parse(fs.readFileSync('./data.json','utf-8'));
+    const Id=Number(req.params.id);
+    
+    const delet=user.filter((user)=>user.id!=Id);
+ fs.writeFileSync('./data.json',JSON.stringify(delet));
+    res.json("success");
+})
+
+
 app.listen(port,()=>{
     console.log(`server this start this ${port}`);
 })
