@@ -1,33 +1,30 @@
 const express=require("express");
 const app =express();
+const connectDB=require('./db.js');
 const Port=6000;
-//load moddleware in app
+//import the routess
+const routess=require('./routess.js');
+
+
 //in bulid in middleware
-//add mongoose libary
-const mongoose = require('mongoose');
+
+//connected data base in another file
+
+
+connectDB();
+//uses the routes
+app.use(routess);
 app.use(express.json());
 //form data (HTML form) read karne ke liye
 app.use(express.urlencoded({ extended: true }));
 
 //connection of database
      
-const connectDB=async()=>{
-    try{
-        const conn= await mongoose.connect(`mongodb://localhost:27017/test`,{useNewUrlParser:true, });
-         
-        console.log(`MongoDB connected: ${conn.connection.host}`);
-    }
-    catch(error){
-        console.error("Db error",error.message);
-       
-    };
-};
-
-connectDB();
 
 
 
 
+app.use('/api',routess);
 
 
 

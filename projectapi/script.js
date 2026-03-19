@@ -47,6 +47,7 @@ alert("successfuly");
    async function show(){
     
    let  res=  await fetch('http://localhost:7000/api/submit')
+  // let res=await fetch('http://localhost:6000/api/users')
       let getdata=  await res.json();
   
    //let string= JSON.stringify(getdata);
