@@ -17,12 +17,12 @@ router.get('/users', async(req,res)=>{
 });
 
 //post data
+
+
 router.post("/users",async(req,res)=>{
     try{
         
-    
-        
-        const Newuser= new usermodel(req.body);
+    const Newuser= new usermodel(req.body);
          
         await Newuser.save();
      console.log(Newuser);
@@ -35,6 +35,30 @@ router.post("/users",async(req,res)=>{
    }
 });
 
+//update
+router.put('/users/:_id',async(req,res)=>{
+   try{  
+       const id=req.params.id;
+        const data=req.body;
+        console.log(id);
+      const update= await usermodel.findByIdAndUpdate(
+       
+       
+   {new:true},
+   console.log(update)
+      
+);
+console.log(update);
+}
+      
+   
+   catch(error){
+    res.status(500).json("not update data");
+
+   }
+   
+
+})
 
 
 

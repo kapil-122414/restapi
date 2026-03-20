@@ -16,9 +16,7 @@ const userschema=new Schema({
     type:Number
          // duplicate allow nahi
   },
-  subj:{
-    type:String
-  },
+ 
 
     createAt:{
         type:Date,
