@@ -16,7 +16,10 @@ const userschema=new Schema({
     type:Number
          // duplicate allow nahi
   },
- 
+
+ userid:{
+    type:Number
+ },
 
     createAt:{
         type:Date,
