@@ -4,43 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Management System</title>
     <link rel="stylesheet" href="from.css">
 </head>
 
 <body>
 
+
+    <div class="header">
+        <h1>User Management System</h1>
+        <p>
+            Manage user records efficiently with Add, View, Edit and Delete
+            operations.
+        </p>
+    </div>
+
+
+    <div class="form-title">
+        <h2>Add New User</h2>
+        <p>Enter the user details below to create a new record.</p>
+    </div>
+
     <form>
         <input type="text" name="user-name" placeholder="user-name" id="username" />
         <input type="number" name="age" placeholder="Age" id="age" />
         <input type="number" name="number" placeholder="phone_no" id="number" />
-        <button class="submit" onclick="submmit()">submit</button>
 
-        <button type="button" id="show()" onclick="show()"> show</button>
+        <button class="submit" onclick="submmit()">Submit</button>
+
+        <button type="button" id="show()" onclick="show()">Show Users</button>
     </form>
 
 
+    <div class="table-title">
+        <h2>User Records</h2>
+        <p>Below is the list of all registered users.</p>
+    </div>
 
     <table>
         <thead>
             <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>age</th>
-                <th>number</th>
-                <th>edit</th>
-                <th>delete</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Number</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
+
         <tbody id="data">
 
-
-
         </tbody>
-
     </table>
 
+
+    <div class="footer">
+        <p>© 2026 User Management System | Developed by Kapil</p>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 
 </html>

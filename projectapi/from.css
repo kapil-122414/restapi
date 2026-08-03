@@ -1,3 +1,198 @@
-table >thead >tr> th,table >thead >tr,table>tbody{
-    border:2px solid black ;
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  color: #333;
+  padding: 40px 20px;
+}
+
+
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 38px;
+  color: #2563eb;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+.form-title,
+.table-title {
+  max-width: 1100px;
+  margin: 25px auto 15px;
+}
+
+.form-title h2,
+.table-title h2 {
+  font-size: 26px;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.form-title p,
+.table-title p {
+  color: #6b7280;
+}
+
+
+
+form {
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit {
+  background: #2563eb;
+  color: #fff;
+}
+
+.submit:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+#show\(\) {
+  background: #10b981;
+  color: #fff;
+}
+
+#show\(\):hover {
+  background: #059669;
+  transform: translateY(-3px);
+}
+
+
+
+table {
+  max-width: 1100px;
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background: #2563eb;
+  color: #fff;
+}
+
+th {
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+}
+
+tbody tr {
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: #eff6ff;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 12px;
+  }
 }
